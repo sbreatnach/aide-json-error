@@ -1,0 +1,20 @@
+[package]
+name = "aide-json-error"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+aide = { version = "0.15", features = ["axum-json"] }
+axum = "0.8"
+axum-extra = { version = "0.10", features = ["erased-json"] }
+axum-test = { version = "19" }
+schemars = { version = "0.9" }
+serde = "1"
+serde_json = "1"
+tokio = { version = "1", features = [
+  "rt-multi-thread",
+  ] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["catch-panic", "trace"] }
+tracing = "0.1"
